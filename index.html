@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f7f6ef"><title>Before · 在决定之前</title><style>
+@font-face{font-family:Before;src:local('Microsoft YaHei')}*{box-sizing:border-box} :root{--blue:#1450ff;--paper:#f7f6ef;--ink:#14161d;--muted:#898d99;--orange:#ff623b;--line:#e5e5e1}body{margin:0;background:var(--paper);color:var(--ink);font-family:Before,-apple-system,BlinkMacSystemFont,'Noto Sans',sans-serif;font-size:14px}button,input,textarea,select{font:inherit}button{cursor:pointer;color:inherit;border:0;background:none}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--blue);outline-offset:3px}button:active{transform:scale(.98)}button:disabled{opacity:.5}#app{max-width:480px;margin:auto;min-height:100dvh;position:relative}.page{padding:22px 22px 95px;min-height:100dvh;animation:enter .18s ease}.page.no-nav{padding-bottom:30px}h1,h2,h3,p{margin:0}h1{font-size:27px;line-height:1.4;letter-spacing:-1px}h2{font-size:21px;line-height:1.5}h3{font-size:16px;line-height:1.6}p{line-height:1.7}.muted,small{color:var(--muted)}small{font-size:11px}.brand{font-size:23px;font-weight:900;letter-spacing:-1px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;min-height:30px}.top.center{position:relative;justify-content:center}.back{position:absolute;left:-8px;font-size:30px;line-height:30px;min-width:40px;min-height:40px}.icon{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}.primary{background:var(--blue);color:white;border-radius:28px;min-height:48px;width:100%;padding:13px 20px;font-size:15px}.text-button{color:var(--blue);padding:8px}.space{margin-top:24px}.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,480px);display:flex;justify-content:space-around;background:#faf9f4ed;border-top:1px solid var(--line);padding:10px 0 max(12px,env(safe-area-inset-bottom));z-index:5;backdrop-filter:blur(16px)}.nav button{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:10px;color:#7d8290;min-width:58px}.nav button.active{color:var(--blue)}.nav button.active .icon{stroke-width:2.4}.hero{background:linear-gradient(120deg,#0444ff,#5489ff);border-radius:12px;color:white;overflow:hidden;position:relative;padding:24px 18px;min-height:155px;margin:14px 0 18px}.hero h2{font-size:21px;position:relative;z-index:1}.hero p{max-width:75%;position:relative;z-index:1}.hero .pill{background:white;color:var(--blue);margin-top:12px}.hero-art{position:absolute;right:-22px;bottom:-48px;width:165px;height:165px;border-radius:50%;background:#8eb3ff80;border:22px solid #a4c0ff55}.hero-art:after{content:'';position:absolute;right:40px;top:-45px;width:30px;height:30px;background:var(--orange);border-radius:50%}.pill{display:inline-block;border-radius:18px;padding:7px 13px;background:#ececeb;font-size:12px}.pill.selected{background:#dbe4ff;color:var(--blue)}.shortcuts{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:26px}.shortcut{background:#fff;border:1px solid #ededeb;border-radius:13px;display:grid;justify-items:center;gap:9px;padding:15px 0;font-size:12px}.bubble{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);border-radius:50%;width:52px;height:52px;color:white;flex-shrink:0;box-shadow:inset 0 0 12px #ffffff38}.bubble.orange{background:var(--orange)}.bubble.small{width:35px;height:35px;border-radius:11px}.section-heading{display:flex;align-items:center;justify-content:space-between;margin:22px 0 12px}.section-heading button{font-size:11px;color:var(--muted)}.card{padding:15px;border:1px solid #eeeee8;border-radius:13px;background:#ffffffb8;margin-bottom:12px;text-align:left;width:100%;display:block}.row{display:flex;align-items:center;gap:13px}.row .grow{flex:1;min-width:0}.chevron{color:#8c91a0;font-size:21px}.thumb{width:64px;height:60px;object-fit:cover;border-radius:9px}.tag{font-size:10px;border-radius:5px;background:#eeeeef;color:#8a8e99;padding:3px 6px}.status{color:#22b8a3;background:#dff5ea;font-size:10px;padding:3px 6px;border-radius:5px}.search{display:flex;align-items:center;gap:8px;border:1px solid #dcdedc;border-radius:24px;padding:10px 13px;margin:14px 0}.search input{border:0;outline:0;min-width:0;width:100%;background:none;font-size:12px}.tabs{display:flex;gap:23px;margin:20px 0}.tabs button{padding:0 0 9px;color:#8b8c95;font-size:13px}.tabs button.active{border-bottom:2px solid var(--ink);color:var(--ink);font-weight:bold}.field{display:block;margin:21px 0}.field>span{display:block;margin-bottom:10px;font-size:13px}input,textarea,select{background:transparent;border:1px solid #dfe1de;border-radius:14px;width:100%;padding:14px;color:var(--ink);font-size:13px}input::placeholder,textarea::placeholder{color:#989da9}textarea{resize:vertical;min-height:100px}.input-group{display:flex;align-items:center;border:1px solid #dfe1de;border-radius:28px;padding:0 14px;margin:18px 0;min-height:49px}.input-group input{border:0;border-radius:0;min-width:0}.input-group .icon{width:17px;color:var(--muted);flex-shrink:0}.input-group button{color:var(--blue);white-space:nowrap;font-size:11px}.auth{padding-top:20px;overflow:hidden}.auth h1{margin-top:40px;font-size:27px}.auth h2{font-size:22px}.auth form{margin-top:42px}.auth .primary{margin-top:22px}.auth-footer{text-align:center;margin-top:34px;font-size:12px;color:#6f737e}.auth-note{font-size:11px;color:#9296a0;text-align:center;margin-top:24px}.agreement{display:flex;align-items:center;font-size:10px;color:#777e8d;gap:7px;margin:22px 0}.agreement input{width:17px;height:17px;accent-color:var(--blue)}.agreement button{padding:0;color:var(--blue);font-size:10px}.welcome{display:flex;flex-direction:column;overflow:hidden;height:100dvh;min-height:600px;padding:28px 28px 35px}.welcome .eyebrow{letter-spacing:2px;font-size:10px;color:#666c76;margin:20px 0 12px}.welcome h1{font-size:64px;line-height:1.03;font-weight:1000;letter-spacing:-4px;z-index:1}.welcome p{margin-top:14px;letter-spacing:1px}.welcome-art{flex:1;min-height:180px;position:relative}.welcome-art .blue{position:absolute;width:205px;height:125px;background:var(--blue);border-radius:150px 150px 0 0;right:-65px;top:12px}.welcome-art .orange{position:absolute;width:225px;height:105px;background:var(--orange);border-radius:160px 160px 0 0;right:-48px;bottom:22px}.welcome-art .dots{width:115px;height:125px;position:absolute;left:5px;bottom:39px;background-image:radial-gradient(#20242a 1.5px,transparent 1.5px);background-size:17px 17px}.welcome-art:after{content:'';height:5px;width:76px;background:var(--blue);position:absolute;bottom:18px;left:4px}.circle{position:absolute;width:46px;height:46px;border-radius:50%;background:var(--orange);right:29px;top:255px}.banner{width:100%;height:145px;object-fit:cover;border-radius:12px;margin-bottom:14px}.stats{display:flex;padding:24px 0;justify-content:space-around;text-align:center}.stats>div{flex:1;border-right:1px solid var(--line);font-size:16px}.stats>div:last-child{border:0}.stats small{display:block;margin-top:6px}.progress-row{display:flex;align-items:center;gap:12px;margin-top:15px;font-size:11px;color:#818694}.track{height:5px;border-radius:5px;background:#e6e7e7;flex:1;overflow:hidden}.track>span{display:block;background:var(--blue);height:100%;border-radius:5px}.stepper{display:flex;justify-content:space-between;margin:35px 0 24px}.stepper div{display:grid;gap:10px;text-align:center;font-size:11px;color:#9398a4;position:relative;flex:1}.stepper b{background:#e8e9e7;border-radius:50%;width:28px;height:28px;margin:auto;line-height:28px;font-weight:400}.stepper .active b{background:var(--blue);color:white}.date-range{display:flex;gap:7px;align-items:center}.date-range input{font-size:11px;padding:12px 7px}.task{display:flex;gap:13px;align-items:flex-start;padding:18px 0;border-bottom:1px solid #ededeb}.check{border:1px solid #bfc5ce;width:23px;height:23px;border-radius:50%;flex-shrink:0;color:white;padding:0}.check.done{border-color:var(--blue);background:var(--blue)}.task p{font-size:13px}.task small{font-size:10px}.profile-head{display:flex;align-items:center;gap:14px;margin:28px 0}.avatar{background:#f4d07e;border:4px solid #fff5d7;border-radius:50%;width:67px;height:67px;font-size:39px;text-align:center;line-height:60px}.menu{padding:0 15px}.menu button{display:flex;align-items:center;gap:14px;padding:19px 0;border-bottom:1px solid #ededeb;width:100%;font-size:13px;text-align:left}.menu button:last-child{border:0}.menu .chevron{margin-left:auto}.rings{display:flex;justify-content:space-between;gap:6px;margin-top:16px}.ring{width:58px;height:58px;border-radius:50%;background:conic-gradient(var(--ring-color,var(--blue)) calc(var(--value)*1%),#e7e7e3 0);padding:5px;display:grid;place-items:center}.ring>span{background:#fff;border-radius:50%;width:48px;height:48px;display:grid;place-items:center;font-size:13px}.ring-item{text-align:center}.ring-item small{display:block;margin-top:9px;font-size:10px}.suggestions{padding-left:20px;color:#7f8695;line-height:2.4;font-size:12px}.suggestions li::marker{color:var(--blue)}.empty{text-align:center;padding:40px 15px;color:var(--muted);line-height:1.8}.form-error{color:#d74e2b;font-size:12px;min-height:20px;margin-top:10px}dialog{background:var(--paper);border:0;border-radius:20px;padding:25px;max-width:calc(100% - 36px);width:380px;color:var(--ink)}dialog::backdrop{background:#141c3688;backdrop-filter:blur(3px)}dialog h2{margin-bottom:15px}dialog .primary{margin-top:20px}#toast{position:fixed;bottom:96px;left:50%;transform:translateX(-50%);background:#171d32ed;color:white;padding:12px 20px;border-radius:25px;font-size:12px;z-index:20;max-width:90%;opacity:0;pointer-events:none;transition:opacity .2s}#toast.show{opacity:1}.detail-tabs{justify-content:space-around}.detail-tabs button.active{border-color:var(--blue)}.plain-list{line-height:1.9;padding-left:18px;color:#777e8d}.record-text{white-space:pre-wrap;font-size:13px}.danger{color:#d44835}.chips{display:flex;gap:8px;flex-wrap:wrap}@keyframes enter{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}@media(min-width:600px){body{background:#e9e9e4}#app{background:var(--paper);box-shadow:0 0 40px #18243d15}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+</style><style>
+.welcome h1{font-size:76px}
+.welcome .circle{top:290px}
+.welcome-art .blue{top:auto;bottom:132px}
+.page[data-page="newplan"]{display:flex;flex-direction:column}
+.page[data-page="newplan"] #plan-form{display:flex;flex-direction:column;flex:1}
+.page[data-page="newplan"] #plan-form>.primary{margin-top:auto}
+.page[data-page="newplan"] #plan-form>.form-error{margin-bottom:16px}
+.page[data-page="home"] .hero{min-height:175px}
+.page[data-page="home"] .hero-art{width:180px;height:160px;bottom:-8px;right:-8px;border:0;background:transparent url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTYwIj48cGF0aCBkPSJNMjAgMTYwTDUzIDEyNyA5MiAxMzMgMTQxIDEwOSAxODAgMTI1VjE2MFoiIGZpbGw9IiNlZmVhZGMiLz48cGF0aCBkPSJNNjUgMTU5UTU3IDExNyA4MiA5OUwxMDggOTdRMTM3IDExNCAxNDIgMTU5WiIgZmlsbD0iIzE3MWIyMyIvPjxwYXRoIGQ9Ik04NyAxMDBMODggODcgMTA0IDg1IDExMSAxMDQgMTAxIDExM1oiIGZpbGw9IiNlY2U5ZDkiLz48cGF0aCBkPSJNODMgNjRRMTAwIDQ3IDExNiA2NUwxMTUgOTFRMTAyIDEwNiA4OCA5MVoiIGZpbGw9IiNmMWVkZGUiLz48cGF0aCBkPSJNODQgODFRNzggNjIgOTQgNTdRMTExIDUxIDExOSA3MEwxMTAgNzMgOTggNjkgOTEgODJaIiBmaWxsPSIjMWEyMDJiIi8+PHBhdGggZD0iTTgxIDYxTDEwNSA0OSAxMzEgNjEgMTA2IDcxWiIgZmlsbD0iI2E4YzZmZiIgc3Ryb2tlPSIjMWEyMDJiIiBzdHJva2Utd2lkdGg9IjEuNCIvPjxwYXRoIGQ9Ik0xMzAgNjFWODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFhMjAyYiIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTEwOSAxMTRMMTA2IDEzMiA5NCAxMzUgOTUgMTQ1IDExNiAxNDEgMTIzIDEyNSIgZmlsbD0iI2YxZWRkZSIvPjxwYXRoIGQ9Ik03NiA2MVE1MSA3MiA0MyA1M1QyOCA0NFEyMSAyMSA0MCAyMFE1NCAyMCA1NyA0MFE3OCAzMyA3NiA2MVoiIGZpbGw9IiNmN2Y2ZWYiLz48L3N2Zz4K') center/contain no-repeat;border-radius:0}
+.page[data-page="home"] .hero-art:after{top:3px;right:24px}
+
+</style><style>
+/* Matches the supplied recording's original Before pages. */
+:root{--blue:#1955f7;--paper:#f8f7f1;--ink:#14161d;--line:#e7e7e2}
+body{background:#e9e9e4}
+#app{background:var(--paper)}
+.primary{background:var(--blue);font-size:15px;font-weight:500;min-height:50px}
+.page{padding-left:24px;padding-right:24px}
+.section-heading h3,.video-list-title{font-size:17px;font-weight:750}
+.video-section-note{font-size:12px;color:#878b96;margin:-4px 0 13px}
+.video-story-card{background:#fff;border:1px solid #f0f0ec;border-radius:15px;overflow:hidden;margin:12px 0 20px;box-shadow:0 8px 24px #192c4b08}
+.video-story-cover{height:230px;border-radius:14px 14px 0 0;background:#dbe7fd;color:#173d6d;padding:28px 30px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.video-story-cover:after{content:'';position:absolute;width:215px;height:215px;border:32px solid #cbdcf4;border-radius:50%;right:-63px;bottom:-111px;opacity:.9}
+.video-story-cover>*{position:relative;z-index:1}
+.video-story-cover>span{font-size:13px}
+.video-story-cover>strong{font-size:24px;line-height:1.35;letter-spacing:-.5px;max-width:95%}
+.video-story-cover>small{font-size:11px;color:#466080}
+.video-story-summary{padding:20px 22px 22px}
+.video-story-summary h3{font-size:17px;line-height:1.45;margin-bottom:12px}
+.video-story-summary p{font-size:13px;color:#6f7787;line-height:1.8;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.video-story-link{display:block;color:var(--blue);font-size:13px;padding:14px 0 0}
+.video-direction{padding:18px;margin-bottom:12px;border-radius:15px;background:#fff}
+.video-direction .bubble{width:52px;height:52px;box-shadow:none;background:#1d5bf6}
+.video-direction h3{font-size:16px;line-height:1.4}
+.video-direction p{font-size:12px;line-height:1.5;margin:4px 0}
+.video-direction small{font-size:11px;color:#9b9da4}
+.video-direction .chevron{font-size:20px}
+.video-list-title{margin:24px 0 14px}
+.video-footnote{text-align:center;color:#9da1a8;font-size:10px;margin:22px 0}
+.video-page-title{font-size:21px;margin-bottom:10px}
+.video-story-cover.detail{border-radius:14px;height:270px;margin:5px 0 24px;padding:29px 31px}
+.video-story-cover.detail>strong{font-size:26px}
+.video-story-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#6f7889}
+.video-story-meta button{font-size:12px}
+.video-story-title{font-size:26px;line-height:1.35;margin:18px 0 10px;letter-spacing:-.5px}
+.video-fiction-note{font-size:12px;color:#999da6;margin-bottom:26px}
+.video-story-prose p{font-size:17px;line-height:2.05;margin:0 0 22px;color:#242831}
+.video-insight{border-top:1px solid var(--line);padding-top:23px;margin-top:10px}
+.video-insight h3,.video-story-question h3{font-size:17px;margin-bottom:13px}
+.video-insight p{font-size:14px;color:#515a69;line-height:1.85}
+.video-boundary{border-bottom:1px solid var(--line);padding:23px 0;color:#646d7d;font-size:13px}
+.video-boundary summary{cursor:pointer;list-style:disclosure-closed}
+.video-boundary p{font-size:12px;margin-top:12px}
+.video-story-question{margin:30px 0 20px}
+.video-story-question>p{font-size:16px;line-height:1.9;margin-bottom:19px}
+.video-story-question label{display:block;font-size:13px;margin-bottom:9px}
+.video-story-question textarea{min-height:105px;background:#fffdf9}
+.video-story-question .primary{margin-top:19px}
+.video-sticky-action{position:sticky;bottom:-1px;background:linear-gradient(transparent,#f8f7f1 18%);padding:18px 0 12px;margin-top:20px;text-align:center;z-index:2}
+.video-sticky-action small{display:block;margin-top:8px;color:#aaaeb6}
+.video-banner{height:170px;object-fit:cover;margin:1px 0 18px}
+.video-detail-heading{align-items:start}
+.video-detail-heading h1{font-size:23px;line-height:1.35;letter-spacing:-.4px}
+.video-detail-heading .status{margin-top:5px;white-space:nowrap}
+.video-detail-subtitle{display:block;margin-top:5px}
+.video-detail-tabs{margin:24px 0 8px}
+.video-detail-tabs button{font-size:14px}
+.video-start{margin:10px 0 21px}
+.video-prep{padding:6px 0 14px;border-bottom:1px solid var(--line)}
+.video-prep h3{font-size:13px;margin:13px 0 4px}
+.video-prep p{font-size:12px;color:#777e8b}
+.video-task{padding:19px 0}
+.video-task .check{width:25px;height:25px}
+.video-task .grow>p:first-child{font-size:13px}
+.video-task-description{font-size:11px!important;color:#8c919d;margin-top:6px}
+.video-context-help{border-top:1px solid var(--line);padding-top:23px;margin-top:28px}
+.video-context-help>span{font-size:13px;color:var(--blue)}
+.video-context-help>p{font-size:13px;margin:12px 0 18px}
+.video-help-card{background:#efede8;border-radius:13px;padding:18px}
+.video-help-card small{font-size:11px}
+.video-help-card h3{font-size:15px;margin:8px 0 15px}
+.video-help-card .text-button{padding:4px 13px 4px 0;font-size:12px}
+.video-pause{display:block;margin:20px auto 0}
+.video-record{padding-top:12px}
+.video-record h3{margin-bottom:4px}
+.video-record form{margin-top:15px}
+.video-record textarea{background:#fff;min-height:130px}
+.video-record .primary{margin-top:15px}
+.video-resource p{font-size:13px;color:#6d7482;margin-top:12px}
+.video-resource small{display:block;margin-top:14px}
+@media(min-width:600px){#app{max-width:480px}.nav{width:480px}}
+
+</style></head>
+<body><main id="app"></main><div id="toast" role="status" aria-live="polite"></div><dialog id="modal"></dialog><script>
+(function (root) {
+    const key = 'before.html.v2';
+    const today = () => new Date().toLocaleDateString('en-CA');
+    const seed = () => ({ version: 2, name: '探索者', joined: today(), session: true, favorites: [], records: [], visits: [], plans: [] });
+    const progress = plan => plan.tasks.length ? Math.round(plan.tasks.filter(task => task.done).length / plan.tasks.length * 100) : 0;
+    const validatePlan = plan => !plan.title.trim() ? '请输入计划名称' : !plan.start || !plan.end ? '请选择开始与结束日期' : plan.start > plan.end ? '结束日期不能早于开始日期' : !plan.tasks.length || plan.tasks.some(task => !task.title.trim()) ? '请至少填写一个完整步骤' : '';
+    const escape = value => String(value).replace(/[&<>"']/g, token => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[token]));
+    const api = { key, seed, progress, validatePlan, escape, today };
+    if (typeof module !== 'undefined') module.exports = api;
+    root.BeforeModel = api;
+})(typeof window === 'undefined' ? globalThis : window);
+
+</script><script>
+window.BeforeStories = [{"id":1,"title":"她没有辞职，先去别人的城市住了三天","meta":"年轻人｜M048 实物期权","paragraphs":["周予总说，等攒够钱就去大理住半年。她收藏了很多民宿，知道哪条街下午有阳光，甚至连附近的菜市场都看过攻略。可真有人问她什么时候走，她又会笑着说：“再等等吧，工作也不能说辞就辞。”","她怕的不是陌生城市，而是自己花了很多钱、放弃了稳定生活，最后发现只是喜欢别人镜头里的旅居。于是她没有递辞职信，只请了两天年假，带着电脑住进一家月租民宿。白天，她坐在窗边处理工作；傍晚，和其他住客一起去买菜；晚上，房间安静下来，她才发现自己并没有想象中那么自由——她还是会焦虑消息、担心进度，也会在陌生的街上不知道该和谁说话。","第三天离开时，她没有得到“我要不要旅居”的答案，却写下了一张清单：她喜欢一个人走路，喜欢没有通勤的早晨；但不喜欢没有固定收入时的慌张，也不想永远一个人吃饭。","回程的高铁上，她把“辞职去旅居”改成了“先远程工作一个月，再决定下一步”。原来有些人生不必一次性押上全部。先让自己进去待一会儿，听听真实生活会怎么回答。"],"concept":"M048 实物期权","insight":"面对投入大、退出难的选择，可以先设计一次成本可控的小体验，换取真实信息，而不是只在想象里做决定。三天旅居不能代表半年后的生活，但能帮助她分辨自己究竟在向往什么。","question":"如果不必立刻改变人生，你能不能先为它留出一次小小的试住？"},{"id":2,"title":"她删掉了五十条攀岩攻略","meta":"年轻人｜M018 信息价值","paragraphs":["林见想去攀岩馆已经半年了。她收藏夹里有“攀岩新手装备清单”“第一次抱石要注意什么”“女生攀岩穿搭”，还看过很多人说第一次去最好找朋友陪。但她身边没有人攀岩，于是每次点开预约页面，最后都会退出。","她以为自己缺的是更多攻略。后来有一天，她刷到一条攀岩馆的体验课信息，里面写着：第一次来不用自带装备，会有教练带热身，也可以一个人报名。她盯着那行字看了很久，忽然发现自己真正想知道的，不是“攀岩难不难”，而是“我一个人走进去，会不会很尴尬”。","周末下午，她还是去了。鞋不合脚，第一条线也没爬上去。可教练没有催她，旁边的人也没有像她想象中那样盯着她看。结束后，她坐在馆门口喝水，手指有点发酸，却第一次觉得自己离答案近了一点。","回家后，她没有马上买年卡，也没有把“成为攀岩爱好者”写进计划表。她只在备忘录里记了一句：我不讨厌这里，下次可以再来一次。"],"concept":"M018 信息价值","insight":"当你已经看了很多信息却仍然无法行动时，问题可能不是信息不够，而是这些信息没有回答你最在意的那个问题。一次真实体验，往往比继续收藏更多攻略更有价值。","question":"你现在最想确认的，到底是哪一个只有亲自试过才能回答的问题？"},{"id":3,"title":"她不再问“AI 到底该怎么学”","meta":"年轻人｜M017 信息增益","paragraphs":["蒋宁想成为“很会用 AI 的人”。她报过提示词课程，下载过很多工具，也存了十几个“AI 入门路线图”。每张图都很完整：先学模型，再学工作流，再学数据处理。她越看越慌，因为每一条路都像要花很久，而她不知道自己到底该从哪一条开始。","直到一次小组访谈结束，桌上堆着六段录音和一沓乱七八糟的便签。大家都说“之后再整理”，她却突然想：如果 AI 真能帮我做一件事，我最希望它先帮我做什么？","她没有再搜索“AI 学习路线”，而是把一段访谈录音转成文字，试着让 AI 帮她标出受访者反复提到的词。第一次结果很乱，很多句子也被理解错了。她又补充了访谈背景和自己的分类标准，第二次终于得到一张能继续修改的表。","那天晚上，她还是不会编程，也没弄懂所有模型名词。但她第一次知道，自己并不是想“学会 AI”，而是想让它帮她从混乱的信息里找到线索。这个问题比“我该从哪学起”小得多，却替她打开了第一扇门。"],"concept":"M017 信息增益","insight":"面对很多可能方向时，不一定要先找到全部答案。先提出一个能明显缩小范围的问题，往往更有用。对蒋宁来说，“AI 能先帮我解决什么具体麻烦”比“AI 应该怎么学”更能带来下一步。","question":"如果只能先问一个问题，哪个问题最能帮你排除暂时不需要走的路？"},{"id":4,"title":"她去当了一天“舞台边上的人”","meta":"年轻人｜M037 期望价值","paragraphs":["陈宜一直想去看地下偶像演出。她喜欢舞台、灯光和人群一起喊应援词的感觉，却又觉得这件事“不够实际”。身边的人都在准备实习、考证、投简历，她不太好意思说，自己想知道站在舞台附近会是什么感觉。","有次活动在周末招志愿者，负责发手环、引导观众入场。朋友问她：“做这个能得到什么？”她算了算，要花一个下午，还得自己坐地铁过去，最后可能只换来一张工作人员证和一点疲惫。可她也写下了另一边：她能看见演出后台是怎么运转的，能知道自己喜欢的是舞台本身、表演的人，还是只是网络上热闹的想象。","那天下午，她站在入口处重复说了很多遍“这边检票”。结束后，她帮忙收宣传页，看到一位表演者坐在地上卸妆，旁边放着没喝完的矿泉水。她突然明白，舞台没有她想象中那么遥远，也没有那么轻松。","回家路上，她没有决定以后要不要做偶像相关工作。她只是知道，自己喜欢现场的能量，却不喜欢长时间处在人群中心。这个答案看起来很小，但它不是别人替她讲的，是她亲自站在那里得到的。"],"concept":"M037 期望价值","insight":"一次尝试是否值得，不只看它能不能立刻变现或产生确定结果，也要看它可能带来的体验、信息、联系和后续选择空间。当然，前提是成本在自己能承受的范围内。","question":"这次尝试除了“成功或失败”，还可能给你留下什么？"},{"id":5,"title":"他把 Unity 学习计划缩成了一盏会亮的灯","meta":"年轻人｜M045 鲁棒计划","paragraphs":["程野下班后总想学 Unity。他给自己做过一份很漂亮的计划：周一看教程，周二学 C#，周三做场景，周末完成一个小游戏。第一周，他还认真打卡；第二周加班两天；第三周，他看到桌面的 Unity 图标就开始内疚。","他一直以为是自己不够自律。后来一个周四晚上，他回到家已经九点半，外卖还没吃完，脑子里只剩下“今天又学不了了”。他盯着计划表看了一会儿，把“完成一节课程”划掉，改成了“打开 Unity，让灯亮起来”。","那晚他只花了二十分钟：新建场景，放一个方块，改了颜色，又让一盏灯慢慢变亮。它看起来很简单，甚至有点傻，但他没有关掉软件。他又试着把灯调成忽明忽暗，像深夜楼道里坏掉的感应灯。","之后，他没有要求自己每天进步很多，只把每次任务改成普通工作日也能完成的大小。有时是一盏灯，有时是一个会移动的方块，有时只是把昨天的文件打开看一眼。一个月后，他还没有做出游戏，却有了五个小场景。"],"concept":"M045 鲁棒计划","insight":"好的计划不该只在“状态最好的一周”成立，也要能容纳加班、疲惫和临时状况。把任务缩小，不是降低目标，而是让计划在普通生活里也能继续推进。","question":"如果按你最疲惫的那个晚上来安排，你的第一步可以缩小到什么程度？"},{"id":6,"title":"她暂停了那门已经学了三周的课","meta":"年轻人｜M040 沉没成本与增量决策","paragraphs":["许知遥从高中起就觉得法医很酷。大学后，她花了不少钱报了一门法医学导论课，还提前买了笔记本和一套荧光色标签。前两周，她看纪录片、记专业名词，觉得自己离那个想象中的方向越来越近。","第三周开始，课程进入法医学报告和证据流程。她发现自己并不讨厌案件推理，但一看到长长的技术规范就很难集中注意力。她告诉自己：“都学到这里了，再坚持一下吧。”于是她一边拖着不看课，一边因为拖延更觉得自己不够认真。","有天晚上，她打开进度条，发现后面还有二十多个小时。她突然问自己：如果今天才看到这门课，我还愿意花接下来的二十个小时继续吗？答案不是完全不愿意，而是她更想接触案例分析和法律逻辑，而不是逼自己完成所有章节。","她没有把课程删除，而是暂停了。之后，她找了一次模拟案例分析活动，花一个晚上读材料、整理时间线。结束时，她依然不确定未来会不会走向法律或法医，但她终于把“我已经花了钱”与“我接下来想不想花时间”分开了。"],"concept":"M040 沉没成本与增量决策","insight":"已经花出去的钱和时间，未必能通过继续投入而回来。决定是否继续时，更应该看从现在开始还要付出什么、可能得到什么，以及自己真正想验证的是什么。","question":"如果今天才遇见这条路，你还愿意为它投入接下来的时间吗？"}];
+</script><script>
+window.BeforeExperiences = [
+  {
+    id: 'law', icon: 'book', category: '职业探索', title: '法律与法医', subtitle: '从一份公开案例开始，看看自己更在意哪一部分',
+    prep: '准备一份来源明确、允许公开阅读的案例材料和一张空白纸。不要使用真实当事人的隐私资料。',
+    result: '一页案例时间线，加上“我想继续了解的岗位问题”清单。', story: 6,
+    steps: [
+      ['选一份公开材料', '记录来源和发布日期，确认自己能看懂基本背景；若材料太难，换一份更短的。'],
+      ['整理时间线', '只摘出已知事实、待确认问题和自己的推测，给三类内容分别做标记。'],
+      ['写下职业疑问', '列出想向老师或从业者确认的三个问题，例如真实工作中的证据流程。']
+    ],
+    help: '如果发现自己只喜欢案件故事、不喜欢规范流程，也是一条有用的观察。'
+  },
+  {
+    id: 'fashion', icon: 'star', category: '职业探索', title: '时尚内容策划', subtitle: '用一个主题试写选题，而不是先决定职业',
+    prep: '选一个你熟悉的穿搭场景，准备三张你有权使用的参考图或只用文字描述。',
+    result: '一页选题卡：受众、场景、搭配理由和需要核实的知识。', story: 2,
+    steps: [
+      ['选定一个具体场景', '例如雨天通勤或第一次参加面试，写清楚这份内容想帮谁。'],
+      ['制作选题卡', '写一个标题，说明三种搭配选择及各自适用条件。'],
+      ['请一人阅读', '问对方最想补充什么信息，记录原话，不急着修改全部内容。']
+    ],
+    help: '第一次做选题无需购买新衣服。真实岗位的工作流程还需要请从业者核实。'
+  },
+  {
+    id: 'unity', icon: 'game', category: '技能试做', title: 'Unity 点亮一盏灯', subtitle: '把庞大的学习目标缩成一个可见的小场景',
+    prep: '电脑已安装可运行的 Unity Editor，并能新建 3D 场景。首次安装所需时间因设备而异。',
+    result: '一个保存好的场景：方块、灯光，以及一句完成后的观察。', story: 5,
+    steps: [
+      ['创建并保存场景', '新建 3D 项目或打开已有项目，创建场景后先保存，给它一个容易找到的名字。'],
+      ['放入一个方块和灯', '使用 Hierarchy 添加 Cube 与 Light，观察灯光变化。界面名称可能随版本不同。'],
+      ['改动并记录', '尝试修改灯光颜色或强度，保存场景，写下最卡住的一个操作。']
+    ],
+    help: '找不到按钮时请查看与你的 Unity 版本对应的官方教程；故事只帮助调整行动大小，不能代替软件操作说明。'
+  },
+  {
+    id: 'ai', icon: 'note', category: '技能试做', title: 'AI 整理一段访谈', subtitle: '先解决手上的信息混乱，再决定要学哪些工具',
+    prep: '准备一段已取得使用同意、没有敏感个人信息的短访谈文字。不要上传未经授权的录音。',
+    result: '一张可人工修改的主题表，标明 AI 结果中需要核对的地方。', story: 3,
+    steps: [
+      ['确定整理目标', '写下你要找什么，例如受访者反复提到的困难。'],
+      ['进行一次整理', '使用你有权限的工具处理文字，要求它标出对应原句，避免只给总结。'],
+      ['人工核对', '逐条查看原文，删掉误解，写下哪些分类标准需要补充。']
+    ],
+    help: '没有合适的 AI 工具，也可以先手工做表；关键是看哪些问题值得继续验证。'
+  },
+  {
+    id: 'city', icon: 'city', category: '生活方式', title: '给理想城市一次试住', subtitle: '用成本可控的体验，核对想象与日常',
+    prep: '先写清预算、安全安排及必须满足的工作或学习条件。无法出行时，可从本地一日体验开始。',
+    result: '一张“喜欢 / 不适应 / 还不知道”清单。', story: 1,
+    steps: [
+      ['写下想验证的问题', '例如通勤、独处或生活成本。每次先选一两个问题。'],
+      ['体验普通的一天', '尽量观察日常节奏，不只安排景点或网红店。'],
+      ['记录下一步', '把观察分成喜欢、不适应、还不知道，再决定是否需要更长体验。']
+    ],
+    help: '短期体验不能代表长期生活；它的作用是帮你发现下一次需要确认什么。'
+  },
+  {
+    id: 'live', icon: 'rocket', category: '兴趣体验', title: '走近一次现场活动', subtitle: '看看自己喜欢的是舞台、幕后，还是现场氛围',
+    prep: '选择正规活动，了解费用、交通与安全信息；志愿者机会需确认职责和主办方。',
+    result: '一份现场观察记录和愿意再试一次的理由。', story: 4,
+    steps: [
+      ['选一种进入方式', '观众、志愿者或公开开放日都可以，选择当前能承受的方式。'],
+      ['观察实际过程', '记下让你兴奋和疲惫的时刻，也留意幕后劳动。'],
+      ['写下真实感受', '分别回答“想再去吗”和“想参与哪一部分”。']
+    ],
+    help: '一次活动不足以判断一份职业，但能帮助你提出更具体的问题。'
+  }
+];
+
+</script><script>
+const Model = window.BeforeModel;
+const app = document.querySelector('#app');
+const modal = document.querySelector('#modal');
+let state;
+try { state = JSON.parse(localStorage.getItem(Model.key)) || Model.seed(); } catch { state = Model.seed(); }
+let route = state.session ? 'home' : 'welcome';
+let trail = [];
+let selectedIndustry = 0;
+let selectedPlan = 'media';
+let exploreTab = '推荐';
+let planTab = '我的计划';
+let detailTab = '任务';
+let draft = null;
+let draftStep = 1;
+let loginMode = 'code';
+let codeUntil = 0;
+let toastTimer;
+const esc = Model.escape;
+const industries = [
+    { title: '游戏行业', subtitle: '从兴趣到职业，了解游戏行业的真实一面', count: '12.6k', icon: 'game', category: '行业', body: '从游戏策划、美术到程序，不同岗位有不同的成长路径。这里有行业动态、入门指南和真实的从业视角。', articles: ['游戏策划需要具备哪些能力？', '游戏美术的学习路径', '独立游戏开发的经验分享'] },
+    { title: '自媒体与内容创作', subtitle: '记录生活，也能成为职业', count: '8.3k', icon: 'note', category: '技能', body: '从选题、表达、制作到复盘，用一个小作品开始探索内容创作。先验证兴趣，再建立稳定的创作节奏。', articles: ['如何找到你的第一个内容选题？', '从零开始制作第一条视频', '建立可持续的创作习惯'] },
+    { title: '跨专业学习', subtitle: '用新的知识打开更多可能', count: '6.4k', icon: 'book', category: '技能', body: '不必一开始就决定未来。通过基础课程、小型项目和学习记录，逐步判断一个新方向是否适合你。', articles: ['为自己设计一份入门学习地图', '跨专业学习的三个小步骤', '如何验证学习成果'] },
+    { title: '城市生活', subtitle: '不同的城市，不同的生活方式', count: '5.2k', icon: 'city', category: '生活', body: '从居住、通勤、工作机会到日常节奏，探索适合自己的城市生活。用一次实地观察代替想象。', articles: ['选择城市前应该了解什么？', '用一个周末认识一座城市', '记录你的理想生活清单'] }
+];
+const paths = {
+    home: 'M3 10 12 3l9 7v11h-6v-7H9v7H3Z', search: 'M20 20l-5-5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0',
+    plan: 'M5 4h14v17H5ZM8 2v4m8-4v4M8 10h8m-8 4h5', user: 'M16 6a4 4 0 1 1-8 0 4 4 0 0 1 8 0M3 21v-3a9 9 0 0 1 18 0v3Z',
+    rocket: 'M8 16 5 19m3-9-5 1v5h5m6-8 1-5h5v5m-12 8C7 9 13 3 21 3c0 8-6 14-13 13Zm6-7h.01',
+    note: 'M5 3h14v18H5Zm4 5h6m-6 4h6m-6 4h3', game: 'M7 6h10l4 11-3 2-4-4h-4l-4 4-3-2Zm0 3v5m-2-2h4m6-2h.01m3 3h.01',
+    book: 'm2 8 10-6 10 6-10 6Zm3 4v6l7 4 7-4v-6', city: 'M3 21V8h7v13m0 0V3h8v18m0-10h3v10M6 12h1m-1 4h1m6-9h2m-2 4h2m-2 4h2',
+    star: 'm12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1Z', settings: 'm9 3 6 0 1 4 4 2v6l-4 2-1 4H9l-1-4-4-2V9l4-2Zm6 9a3 3 0 1 0-6 0 3 3 0 0 0 6 0',
+    bell: 'M5 17h14l-2-4V8a5 5 0 0 0-10 0v5Zm5 3h4', lock: 'M6 10h12v11H6Zm3 0V6a3 3 0 0 1 6 0v4', phone: 'M7 2h10v20H7Zm3 3h4m-3 14h2', check: 'm5 12 4 4L19 6'
+};
+const icon = name => `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="${paths[name] || paths.note}"/></svg>`;
+const button = (label, action, extra = '') => `<button type="button" data-action="${action}" ${extra}>${label}</button>`;
+const header = title => `<header class="top center">${button('‹', 'back', 'class="back" aria-label="返回"')}<strong>${title}</strong></header>`;
+const save = () => { try { localStorage.setItem(Model.key, JSON.stringify(state)); } catch { toast('存储空间不足，当前更改无法保存'); } };
+function toast(message) { const element = document.querySelector('#toast'); element.textContent = message; element.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => element.classList.remove('show'), 2800); }
+function go(next) { if (next !== route) trail.push(route); route = next; render(); window.scrollTo(0, 0); }
+window.beforeBack = function () { if (modal.open) { modal.close(); return true; } if (trail.length) { route = trail.pop(); render(); return true; } if (route !== 'home' && state.session) { route = 'home'; render(); return true; } return false; };
+function nav(active) { return `<nav class="nav" aria-label="主导航">${[['home','home','首页'],['explore','search','探索'],['plans','plan','计划'],['profile','user','我的']].map(([page, glyph, label]) => button(`${icon(glyph)}${label}`, `nav:${page}`, `class="${active === page ? 'active' : ''}" aria-label="${label}"`)).join('')}</nav>`; }
+function page(content, active) { return `<section class="page ${active ? '' : 'no-nav'}" data-page="${route}">${content}</section>${active ? nav(active) : ''}`; }
+function progress(plan) { const percent = Model.progress(plan); return `<div class="progress-row"><div class="track"><span style="width:${percent}%"></span></div><span>${percent}%</span></div>`; }
+function planCard(plan) { return button(`<div class="row"><span class="bubble small">${icon('rocket')}</span><div class="grow"><h3>${esc(plan.title)}</h3><div style="margin-top:6px"><span class="status">● ${Model.progress(plan) === 100 ? '已完成' : '进行中'}</span> <small>${esc(plan.start)} · ${esc(plan.end)}</small></div></div></div>${progress(plan)}`, `plan:${plan.id}`, 'class="card"'); }
+function showModal(title, body) { modal.innerHTML = `<h2>${title}</h2>${body}${button('关闭', 'close', 'class="text-button" style="display:block;margin:15px auto 0"')}`; modal.showModal(); }
+function welcome() { return `<section class="welcome" data-page="welcome"><div class="brand">Before</div><div class="eyebrow">EXPLORE<br>PLAN<br>TAKE ACTION!</div><h1>在决定<br>之前</h1><p>用 99 个方法，迈出第一步</p><span class="circle"></span><div class="welcome-art" aria-hidden="true"><div class="dots"></div><div class="blue"></div><div class="orange"></div></div>${button('开始探索 →', 'go:login', 'class="primary"')}</section>`; }
+function auth(register) { return page(`${register ? header('') : '<div class="brand">Before</div>'}<div class="auth"><h1>${register ? '注册账号' : '欢迎回来'}</h1>${register ? '<p class="muted">创建你的专属探索空间</p>' : '<h2>开启你的未来探索之旅</h2>'}<form id="auth-form"><div class="input-group">${icon('phone')}<input name="phone" type="tel" inputmode="numeric" maxlength="11" placeholder="请输入手机号" aria-label="手机号" required></div><div class="input-group">${icon('lock')}<input name="credential" ${loginMode === 'password' && !register ? 'type="password" placeholder="请输入密码"' : 'inputmode="numeric" maxlength="6" placeholder="请输入验证码"'} aria-label="${loginMode === 'password' && !register ? '密码' : '验证码'}" required>${loginMode === 'code' || register ? button('获取验证码','code','id="code-button"') : ''}</div>${register ? `<div class="input-group">${icon('lock')}<input name="password" type="password" minlength="6" maxlength="16" placeholder="请输入密码（6–16位）" aria-label="设置密码" required></div><label class="agreement"><input name="agree" type="checkbox" required><span>我已阅读并同意 ${button('《用户协议》','legal:terms')} 和 ${button('《隐私政策》','legal:privacy')}</span></label>` : ''}<div class="form-error" id="auth-error" role="alert"></div><button class="primary" type="submit">${register ? '注册' : '登录'}</button></form>${register ? '' : button(loginMode === 'code' ? '密码登录' : '验证码登录','login-mode','style="display:block;margin:12px auto"')}<div class="auth-footer">${register ? '已有账号？' : '还没有账号？'}${button(register ? '去登录' : '立即注册',register ? 'go:login' : 'go:register','class="text-button"')}</div><p class="auth-note">离线体验版 · 不发送短信、不连接真实账号服务</p>${!register ? button('先体验一下 →','guest','class="text-button" style="display:block;margin:12px auto"') : ''}</div>`); }
+function home() { return page(`<header class="top"><span class="brand">Before</span>${button(icon('bell'),'notifications','aria-label="通知"')}</header><h2>你好，<br>欢迎来到在决定之前</h2><button class="search" style="width:100%;color:#9398a4" data-action="go:explore">${icon('search')}探索你感兴趣的方向...</button><div class="hero"><h2>探索更多可能<br>从一个小目标开始</h2>${button('去探索 →','go:explore','class="pill"')}<div class="hero-art"></div></div><div class="shortcuts">${[['探索','rocket','explore'],['计划','note','plans'],['行业','city','industry'],['记录','check','records']].map(([label,glyph,target],index) => button(`<span class="bubble small ${index === 3 ? 'orange' : ''}">${icon(glyph)}</span>${label}`,`go:${target}`,'class="shortcut"')).join('')}</div><div class="section-heading"><h3>今日推荐</h3>${button('更多 ›','go:explore')}</div>${button(`<div class="row"><img class="thumb" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgMzQwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiMxNDI3NGIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0MDdmZmMiLz48L2xpbmVhckdyYWRpZW50PjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik02MCAwSDBWNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2E2YzhmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xOCIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjYmcpIi8+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjZ3JpZCkiIHRyYW5zZm9ybT0icm90YXRlKC0xNSA0MDAgMTcwKSIvPjxjaXJjbGUgY3g9IjY0MCIgY3k9Ijc4IiByPSIzOSIgZmlsbD0iI2ZmNjkzZCIvPjxlbGxpcHNlIGN4PSIzOTAiIGN5PSIzMTMiIHJ4PSIyOTAiIHJ5PSI0MiIgZmlsbD0iIzBhMTczNSIgb3BhY2l0eT0iLjUiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOTUgODIpIHJvdGF0ZSgtMTIgMjEwIDEwMCkiPjxyZWN0IHg9IjAiIHdpZHRoPSIyNDgiIGhlaWdodD0iMTYwIiByeD0iMTQiIGZpbGw9IiMwYzE5MmMiIHN0cm9rZT0iIzc2YTRmZiIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHJlY3QgeD0iMTMiIHk9IjEzIiB3aWR0aD0iMjIyIiBoZWlnaHQ9IjEzMCIgcng9IjciIGZpbGw9IiMyZTY1YzciLz48cGF0aCBkPSJNMTggMTIwTDc3IDY3IDEyNCA5MSAxODIgMzIgMjMyIDY4VjE0M0gxOFoiIGZpbGw9IiM3NWE2ZmMiLz48cGF0aCBkPSJNMTA0IDE2M0gxNDdMMTU4IDE5Nkg5MFoiIGZpbGw9IiNhMGM1ZmYiLz48cmVjdCB4PSI2NiIgeT0iMTk2IiB3aWR0aD0iMTE1IiBoZWlnaHQ9IjkiIHJ4PSI0IiBmaWxsPSIjZDRlN2ZmIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ0MCAxNzkpIHJvdGF0ZSgxMikiPjxwYXRoIGQ9Ik0xMiAxNVEyMC02IDQ3IDBMMTM0IDBRMTYwLTYgMTcwIDE5TDE5MCA3OVExOTUgMTExIDE2NyAxMTFMMTM1IDgySDQ2TDE3IDExMFEtMTIgMTE0LTggODBaIiBmaWxsPSIjZGNlOGZmIi8+PHJlY3QgeD0iMjQiIHk9IjM0IiB3aWR0aD0iNDAiIGhlaWdodD0iMTIiIHJ4PSIzIiBmaWxsPSIjMjQzYjc3Ii8+PHJlY3QgeD0iMzgiIHk9IjIwIiB3aWR0aD0iMTIiIGhlaWdodD0iNDAiIHJ4PSIzIiBmaWxsPSIjMjQzYjc3Ii8+PGNpcmNsZSBjeD0iMTQxIiBjeT0iMjciIHI9IjgiIGZpbGw9IiNmZjcyNGMiLz48Y2lyY2xlIGN4PSIxNTciIGN5PSI0NCIgcj0iOCIgZmlsbD0iIzM1NzNmOSIvPjxjaXJjbGUgY3g9Ijg1IiBjeT0iNjAiIHI9IjEzIiBmaWxsPSIjNTE3N2JjIi8+PC9nPjxjaXJjbGUgY3g9IjE0NiIgY3k9IjI3MSIgcj0iMTciIGZpbGw9IiNmZjcxNDUiLz48Y2lyY2xlIGN4PSI3MTUiIGN5PSIyNTgiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZWFjZmYiIHN0cm9rZS13aWR0aD0iMyIvPjwvc3ZnPgo=" alt="游戏行业插画"><div class="grow"><h3>游戏行业入门指南</h3><p><span class="tag">行业 · 职业</span> <small>◉ 12.6k 人在看</small></p></div></div>`,'industry:0','class="card"')}<div class="section-heading"><h3>我的下一步</h3>${button('全部计划 ›','go:plans')}</div>${state.plans.length ? planCard(state.plans.find(plan => Model.progress(plan) < 100) || state.plans[0]) : button('创建第一个小目标 →','new-plan','class="card"')}`, 'home'); }
+function industryCards(query = '') { const result = industries.map((item,index) => ({...item,index})).filter(item => (exploreTab === '推荐' || item.category === exploreTab) && (item.title + item.subtitle).includes(query)); return result.length ? result.map(item => button(`<div class="row"><span class="bubble ${item.index === 1 || item.index === 2 ? 'orange' : ''}">${icon(item.icon)}</span><div class="grow"><h3>${item.title}</h3><p style="font-size:11px" class="muted">${item.subtitle}</p><small>${item.count} 人在看</small></div><span class="chevron">›</span></div>`,`industry:${item.index}`,'class="card"')).join('') : '<div class="empty">没有匹配的方向，试试其他关键词。</div>'; }
+function explore() { return page(`<h2>探索</h2><div class="tabs">${['推荐','行业','技能','生活'].map(label => button(label,`filter:${label}`,`class="${label === exploreTab ? 'active' : ''}"`)).join('')}</div><label class="search">${icon('search')}<input id="explore-search" placeholder="搜索行业、技能或生活" aria-label="搜索方向"></label><h3 style="margin:20px 0 14px">你可能感兴趣的方向</h3><div id="industry-list">${industryCards()}</div>`, 'explore'); }
+function industry() { const item = industries[selectedIndustry]; return page(`${header('行业详情')}<img class="banner" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgMzQwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiMxNDI3NGIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0MDdmZmMiLz48L2xpbmVhckdyYWRpZW50PjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik02MCAwSDBWNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2E2YzhmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xOCIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjYmcpIi8+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjZ3JpZCkiIHRyYW5zZm9ybT0icm90YXRlKC0xNSA0MDAgMTcwKSIvPjxjaXJjbGUgY3g9IjY0MCIgY3k9Ijc4IiByPSIzOSIgZmlsbD0iI2ZmNjkzZCIvPjxlbGxpcHNlIGN4PSIzOTAiIGN5PSIzMTMiIHJ4PSIyOTAiIHJ5PSI0MiIgZmlsbD0iIzBhMTczNSIgb3BhY2l0eT0iLjUiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOTUgODIpIHJvdGF0ZSgtMTIgMjEwIDEwMCkiPjxyZWN0IHg9IjAiIHdpZHRoPSIyNDgiIGhlaWdodD0iMTYwIiByeD0iMTQiIGZpbGw9IiMwYzE5MmMiIHN0cm9rZT0iIzc2YTRmZiIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHJlY3QgeD0iMTMiIHk9IjEzIiB3aWR0aD0iMjIyIiBoZWlnaHQ9IjEzMCIgcng9IjciIGZpbGw9IiMyZTY1YzciLz48cGF0aCBkPSJNMTggMTIwTDc3IDY3IDEyNCA5MSAxODIgMzIgMjMyIDY4VjE0M0gxOFoiIGZpbGw9IiM3NWE2ZmMiLz48cGF0aCBkPSJNMTA0IDE2M0gxNDdMMTU4IDE5Nkg5MFoiIGZpbGw9IiNhMGM1ZmYiLz48cmVjdCB4PSI2NiIgeT0iMTk2IiB3aWR0aD0iMTE1IiBoZWlnaHQ9IjkiIHJ4PSI0IiBmaWxsPSIjZDRlN2ZmIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ0MCAxNzkpIHJvdGF0ZSgxMikiPjxwYXRoIGQ9Ik0xMiAxNVEyMC02IDQ3IDBMMTM0IDBRMTYwLTYgMTcwIDE5TDE5MCA3OVExOTUgMTExIDE2NyAxMTFMMTM1IDgySDQ2TDE3IDExMFEtMTIgMTE0LTggODBaIiBmaWxsPSIjZGNlOGZmIi8+PHJlY3QgeD0iMjQiIHk9IjM0IiB3aWR0aD0iNDAiIGhlaWdodD0iMTIiIHJ4PSIzIiBmaWxsPSIjMjQzYjc3Ii8+PHJlY3QgeD0iMzgiIHk9IjIwIiB3aWR0aD0iMTIiIGhlaWdodD0iNDAiIHJ4PSIzIiBmaWxsPSIjMjQzYjc3Ii8+PGNpcmNsZSBjeD0iMTQxIiBjeT0iMjciIHI9IjgiIGZpbGw9IiNmZjcyNGMiLz48Y2lyY2xlIGN4PSIxNTciIGN5PSI0NCIgcj0iOCIgZmlsbD0iIzM1NzNmOSIvPjxjaXJjbGUgY3g9Ijg1IiBjeT0iNjAiIHI9IjEzIiBmaWxsPSIjNTE3N2JjIi8+PC9nPjxjaXJjbGUgY3g9IjE0NiIgY3k9IjI3MSIgcj0iMTciIGZpbGw9IiNmZjcxNDUiLz48Y2lyY2xlIGN4PSI3MTUiIGN5PSIyNTgiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZWFjZmYiIHN0cm9rZS13aWR0aD0iMyIvPjwvc3ZnPgo=" alt="${item.title}主题插画"><div class="row"><h2 class="grow">${item.title}</h2>${button(icon('star'), 'favorite', `aria-label="${state.favorites.includes(selectedIndustry) ? '取消收藏' : '收藏'}" style="color:${state.favorites.includes(selectedIndustry) ? '#1450ff' : '#8c91a0'}"`)}</div><p><span class="tag">${item.category}</span> <span class="tag">职业</span> <span class="tag">推荐</span></p><p class="muted" style="font-size:13px;margin-top:12px">${item.body}</p><div class="stats"><div>${item.count}<small>关注</small></div><div>89<small>内容</small></div><div>4.8<small>评分</small></div></div><h3 style="margin-bottom:12px">热门内容</h3>${item.articles.map((title,index) => button(`<div class="row"><img class="thumb" style="filter:hue-rotate(${index * 16}deg)" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgMzQwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiMxNDI3NGIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0MDdmZmMiLz48L2xpbmVhckdyYWRpZW50PjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik02MCAwSDBWNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2E2YzhmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xOCIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjYmcpIi8+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjZ3JpZCkiIHRyYW5zZm9ybT0icm90YXRlKC0xNSA0MDAgMTcwKSIvPjxjaXJjbGUgY3g9IjY0MCIgY3k9Ijc4IiByPSIzOSIgZmlsbD0iI2ZmNjkzZCIvPjxlbGxpcHNlIGN4PSIzOTAiIGN5PSIzMTMiIHJ4PSIyOTAiIHJ5PSI0MiIgZmlsbD0iIzBhMTczNSIgb3BhY2l0eT0iLjUiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOTUgODIpIHJvdGF0ZSgtMTIgMjEwIDEwMCkiPjxyZWN0IHg9IjAiIHdpZHRoPSIyNDgiIGhlaWdodD0iMTYwIiByeD0iMTQiIGZpbGw9IiMwYzE5MmMiIHN0cm9rZT0iIzc2YTRmZiIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHJlY3QgeD0iMTMiIHk9IjEzIiB3aWR0aD0iMjIyIiBoZWlnaHQ9IjEzMCIgcng9IjciIGZpbGw9IiMyZTY1YzciLz48cGF0aCBkPSJNMTggMTIwTDc3IDY3IDEyNCA5MSAxODIgMzIgMjMyIDY4VjE0M0gxOFoiIGZpbGw9IiM3NWE2ZmMiLz48cGF0aCBkPSJNMTA0IDE2M0gxNDdMMTU4IDE5Nkg5MFoiIGZpbGw9IiNhMGM1ZmYiLz48cmVjdCB4PSI2NiIgeT0iMTk2IiB3aWR0aD0iMTE1IiBoZWlnaHQ9IjkiIHJ4PSI0IiBmaWxsPSIjZDRlN2ZmIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ0MCAxNzkpIHJvdGF0ZSgxMikiPjxwYXRoIGQ9Ik0xMiAxNVEyMC02IDQ3IDBMMTM0IDBRMTYwLTYgMTcwIDE5TDE5MCA3OVExOTUgMTExIDE2NyAxMTFMMTM1IDgySDQ2TDE3IDExMFEtMTIgMTE0LTggODBaIiBmaWxsPSIjZGNlOGZmIi8+PHJlY3QgeD0iMjQiIHk9IjM0IiB3aWR0aD0iNDAiIGhlaWdodD0iMTIiIHJ4PSIzIiBmaWxsPSIjMjQzYjc3Ii8+PHJlY3QgeD0iMzgiIHk9IjIwIiB3aWR0aD0iMTIiIGhlaWdodD0iNDAiIHJ4PSIzIiBmaWxsPSIjMjQzYjc3Ii8+PGNpcmNsZSBjeD0iMTQxIiBjeT0iMjciIHI9IjgiIGZpbGw9IiNmZjcyNGMiLz48Y2lyY2xlIGN4PSIxNTciIGN5PSI0NCIgcj0iOCIgZmlsbD0iIzM1NzNmOSIvPjxjaXJjbGUgY3g9Ijg1IiBjeT0iNjAiIHI9IjEzIiBmaWxsPSIjNTE3N2JjIi8+PC9nPjxjaXJjbGUgY3g9IjE0NiIgY3k9IjI3MSIgcj0iMTciIGZpbGw9IiNmZjcxNDUiLz48Y2lyY2xlIGN4PSI3MTUiIGN5PSIyNTgiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZWFjZmYiIHN0cm9rZS13aWR0aD0iMyIvPjwvc3ZnPgo=" alt=""><div class="grow"><h3 style="font-size:13px">${title}</h3><small>${[2.3,4.1,1.7][index]}k 阅读 · ${[12,28,15][index]} 评论</small></div><span class="chevron">›</span></div>`,`article:${index}`,'class="card"')).join('')}${button('为这个方向新建计划 +','industry-plan','class="primary space"')}<p class="auth-note">内容与关注、阅读数据为本地演示资料</p>`); }
+function plans() { return page(`<h1>计划</h1><div class="tabs">${['我的计划','推荐计划'].map(label => button(label,`plans-tab:${label}`,`class="${label === planTab ? 'active' : ''}"`)).join('')}</div><div class="hero"><h2>从现在开始<br>把想法变成行动</h2>${button('新建计划 +','new-plan','class="pill"')}<div class="hero-art"></div></div><div class="section-heading"><h3>${planTab}</h3><small>${state.plans.length} 个计划</small></div>${planTab === '我的计划' ? state.plans.map(planCard).join('') || '<div class="empty">还没有计划，从一个小目标开始吧。</div>' : industries.map((item,index) => button(`<h3>${item.title} · 7 天探索</h3><p class="muted">了解基础 → 尝试实践 → 记录感受</p><p class="text-button">使用这个模板 +</p>`,`template:${index}`,'class="card"')).join('')}`, 'plans'); }
+function newPlan() { return page(`${header('新建计划')}<div class="stepper">${['基本信息','具体步骤','完成'].map((label,index) => `<div class="${draftStep >= index + 1 ? 'active' : ''}"><b>${index + 1}</b>${label}</div>`).join('')}</div><form id="plan-form">${draftStep === 1 ? `<label class="field"><span>计划名称</span><input name="title" maxlength="40" placeholder="例如：尝试新媒体方向" value="${esc(draft.title)}" required></label><div class="field"><span>选择分类</span><div class="chips">${['行业探索','技能提升','生活方式'].map(label => button(label,`category:${label}`,`class="pill ${draft.category === label ? 'selected' : ''}"`)).join('')}</div></div><div class="field"><span>计划时间</span><div class="date-range"><input type="date" name="start" aria-label="开始时间" value="${esc(draft.start)}" required><span>～</span><input type="date" name="end" aria-label="结束时间" value="${esc(draft.end)}" required></div></div><label class="field"><span>目标描述</span><textarea name="goal" maxlength="500" placeholder="简单描述你的目标和想要达成的结果...">${esc(draft.goal)}</textarea></label>` : draftStep === 2 ? `<h3>把目标拆成可行动的小步骤</h3><p class="muted">完成每个步骤后，进度会自动更新。</p>${draft.tasks.map((task,index) => `<label class="field"><span>步骤 ${index + 1} ${button('移除',`remove-draft-task:${index}`,'class="text-button"')}</span><input name="task-${index}" maxlength="80" value="${esc(task.title)}" placeholder="填写一个具体行动" required></label>`).join('')}${button('+ 添加步骤','add-draft-task','class="text-button"')}` : `<div class="card"><h2>${esc(draft.title)}</h2><p class="muted">${esc(draft.category)} · ${esc(draft.start)} ～ ${esc(draft.end)}</p><p class="space">${esc(draft.goal)}</p><ol class="plain-list">${draft.tasks.map(task => `<li>${esc(task.title)}</li>`).join('')}</ol></div><p class="muted">确认后将保存到「我的计划」。</p>`}<div id="plan-error" class="form-error" role="alert"></div><button class="primary space" type="submit">${draftStep === 3 ? '完成并创建计划' : '下一步'}</button>${draftStep > 1 ? button('上一步','previous-step','class="text-button" style="display:block;margin:12px auto"') : ''}</form>`); }
+function planDetail() { const plan = state.plans.find(item => item.id === selectedPlan); if (!plan) return page(`${header('计划详情')}<p class="empty">计划不存在或已删除。</p>`); return page(`${header('计划详情')}<img class="banner" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgMzQwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiMxNDI3NGIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0MDdmZmMiLz48L2xpbmVhckdyYWRpZW50PjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik02MCAwSDBWNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2E2YzhmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xOCIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjYmcpIi8+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjZ3JpZCkiIHRyYW5zZm9ybT0icm90YXRlKC0xNSA0MDAgMTcwKSIvPjxjaXJjbGUgY3g9IjY0MCIgY3k9Ijc4IiByPSIzOSIgZmlsbD0iI2ZmNjkzZCIvPjxlbGxpcHNlIGN4PSIzOTAiIGN5PSIzMTMiIHJ4PSIyOTAiIHJ5PSI0MiIgZmlsbD0iIzBhMTczNSIgb3BhY2l0eT0iLjUiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOTUgODIpIHJvdGF0ZSgtMTIgMjEwIDEwMCkiPjxyZWN0IHg9IjAiIHdpZHRoPSIyNDgiIGhlaWdodD0iMTYwIiByeD0iMTQiIGZpbGw9IiMwYzE5MmMiIHN0cm9rZT0iIzc2YTRmZiIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHJlY3QgeD0iMTMiIHk9IjEzIiB3aWR0aD0iMjIyIiBoZWlnaHQ9IjEzMCIgcng9IjciIGZpbGw9IiMyZTY1YzciLz48cGF0aCBkPSJNMTggMTIwTDc3IDY3IDEyNCA5MSAxODIgMzIgMjMyIDY4VjE0M0gxOFoiIGZpbGw9IiM3NWE2ZmMiLz48cGF0aCBkPSJNMTA0IDE2M0gxNDdMMTU4IDE5Nkg5MFoiIGZpbGw9IiNhMGM1ZmYiLz48cmVjdCB4PSI2NiIgeT0iMTk2IiB3aWR0aD0iMTE1IiBoZWlnaHQ9IjkiIHJ4PSI0IiBmaWxsPSIjZDRlN2ZmIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ0MCAxNzkpIHJvdGF0ZSgxMikiPjxwYXRoIGQ9Ik0xMiAxNVEyMC02IDQ3IDBMMTM0IDBRMTYwLTYgMTcwIDE5TDE5MCA3OVExOTUgMTExIDE2NyAxMTFMMTM1IDgySDQ2TDE3IDExMFEtMTIgMTE0LTggODBaIiBmaWxsPSIjZGNlOGZmIi8+PHJlY3QgeD0iMjQiIHk9IjM0IiB3aWR0aD0iNDAiIGhlaWdodD0iMTIiIHJ4PSIzIiBmaWxsPSIjMjQzYjc3Ii8+PHJlY3QgeD0iMzgiIHk9IjIwIiB3aWR0aD0iMTIiIGhlaWdodD0iNDAiIHJ4PSIzIiBmaWxsPSIjMjQzYjc3Ii8+PGNpcmNsZSBjeD0iMTQxIiBjeT0iMjciIHI9IjgiIGZpbGw9IiNmZjcyNGMiLz48Y2lyY2xlIGN4PSIxNTciIGN5PSI0NCIgcj0iOCIgZmlsbD0iIzM1NzNmOSIvPjxjaXJjbGUgY3g9Ijg1IiBjeT0iNjAiIHI9IjEzIiBmaWxsPSIjNTE3N2JjIi8+PC9nPjxjaXJjbGUgY3g9IjE0NiIgY3k9IjI3MSIgcj0iMTciIGZpbGw9IiNmZjcxNDUiLz48Y2lyY2xlIGN4PSI3MTUiIGN5PSIyNTgiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZWFjZmYiIHN0cm9rZS13aWR0aD0iMyIvPjwvc3ZnPgo=" alt="探索计划插画"><div class="row"><h2 class="grow">${esc(plan.title)}</h2><span class="status">${Model.progress(plan) === 100 ? '已完成' : '进行中'}</span></div><small>${esc(plan.start)} - ${esc(plan.end)}</small>${progress(plan)}<div class="tabs detail-tabs">${['任务','记录','资源'].map(label => button(label,`detail-tab:${label}`,`class="${detailTab === label ? 'active' : ''}"`)).join('')}</div>${detailTab === '任务' ? plan.tasks.map((task,index) => `<div class="task">${button(task.done ? '✓' : '',`toggle:${index}`,`class="check ${task.done ? 'done' : ''}" aria-label="${task.done ? '取消完成' : '完成'}：${esc(task.title)}" aria-pressed="${task.done}"`)}<div class="grow"><p>${esc(task.title)}</p><small>${task.done ? '已完成' : '未开始'}</small></div></div>`).join('') + button('+ 添加任务','add-task','class="text-button" style="width:100%;margin-top:15px"') : detailTab === '记录' ? recordCards(plan.id) + button('+ 写一条记录','write-record','class="primary space"') : `<div class="card"><h3>行动指南</h3><p class="muted">${esc(plan.goal || '每次只做一个小步骤，记录你的观察和感受。')}</p></div>${button('浏览行业资料 →','go:explore','class="card"')}`}${button('删除计划','delete-plan','class="text-button danger" style="margin-top:26px"')}`); }
+function stats() { return `<div class="stats card"><div>${state.plans.filter(plan => Model.progress(plan) < 100).length}<small>进行中计划</small></div><div>${state.plans.filter(plan => Model.progress(plan) === 100).length}<small>完成计划</small></div><div>${state.records.length}<small>记录</small></div></div>`; }
+function profileHead() { return `<div class="profile-head"><div class="avatar" aria-hidden="true">👩🏻</div><div class="grow"><h3>${esc(state.name)}</h3><small>正在探索更多可能</small></div>${button('›','edit-name','class="chevron" aria-label="修改昵称"')}</div>`; }
+function menus() { return `<div class="card menu">${[['star','我的收藏','favorites'],['book','我的课程','courses'],['note','成长报告','go:report'],['settings','设置','settings']].map(([glyph,label,action]) => button(`${icon(glyph)}${label}<span class="chevron">›</span>`,action)).join('')}</div>`; }
+function recordCards(planId) { const records = state.records.filter(record => !planId || record.planId === planId); return records.length ? records.map(record => `<div class="card"><small>${esc(record.date)}</small><p class="record-text">${esc(record.text)}</p>${button('删除',`delete-record:${record.id}`,'class="text-button danger"')}</div>`).join('') : '<div class="empty">还没有记录<br>写下今天的小收获吧。</div>'; }
+function profile(records) { return page(`${records ? header('记录') : '<h3>个人中心</h3>'}${profileHead()}${stats()}${records ? button('+ 记录今天的探索','write-record','class="primary"') + `<div class="space">${recordCards()}</div>` : ''}${menus()}`, 'profile'); }
+function report() { const totalTasks = state.plans.reduce((total,plan) => total + plan.tasks.length,0); const doneTasks = state.plans.reduce((total,plan) => total + plan.tasks.filter(task => task.done).length,0); const values = [Math.min(100,state.visits.length * 25), totalTasks ? Math.round(doneTasks / totalTasks * 100) : 0, Math.min(100,state.plans.filter(plan => plan.category === '生活方式').length * 25),Math.min(100,state.records.length * 10)]; const days = Math.max(1,Math.floor((Date.now() - new Date(state.joined).getTime()) / 86400000) + 1); return page(`${header('成长报告')}<p class="muted">你在路上，已经走了 <strong style="color:#161b28">${days}</strong> 天</p><div class="hero"><h3>阶段性总结</h3><p style="font-size:13px">你已探索 ${state.visits.length} 个方向，<br>完成 ${doneTasks} 个行动步骤。<br>每一个小行动，都在让未来更清晰。</p><div class="hero-art"></div></div><div class="card"><h3>你的探索偏好</h3><div class="rings">${['行业探索','技能提升','生活方式','自我认知'].map((label,index) => `<div class="ring-item"><div class="ring" style="--value:${values[index]};--ring-color:${['#1450ff','#ff623b','#25bf9a','#1450ff'][index]}"><span>${values[index]}%</span></div><small>${label}</small></div>`).join('')}</div><p class="auth-note">基于本机探索与行动记录，不是专业能力测评</p></div><div class="card"><h3>下一步建议</h3><ul class="suggestions"><li>继续深入了解你感兴趣的行业</li><li>尝试参与更多实践项目</li><li>定期回顾和调整计划</li></ul></div>${button('查看详细报告','full-report','class="primary space"')}`); }
+function render() { app.innerHTML = ({welcome,login:() => auth(false),register:() => auth(true),home,explore,industry,plans,newplan:newPlan,detail:planDetail,records:() => profile(true),profile:() => profile(false),report}[route] || home)(); updateCodeButton(); }
+function startPlan(title = '', category = '行业探索') { draft = {title,category,start:Model.today(),end:'',goal:'',tasks:[{title:'',done:false}]}; draftStep = 1; go('newplan'); }
+function captureDraft() { const form = document.querySelector('#plan-form'); if (!form) return; const data = new FormData(form); if (draftStep === 1) ['title','start','end','goal'].forEach(key => draft[key] = String(data.get(key) || '').trim()); if (draftStep === 2) draft.tasks.forEach((task,index) => task.title = String(data.get(`task-${index}`) || '').trim()); }
+function updateCodeButton() { const element = document.querySelector('#code-button'); if (!element) return; const seconds = Math.max(0,Math.ceil((codeUntil - Date.now()) / 1000)); element.disabled = seconds > 0; element.textContent = seconds ? `${seconds}秒后重试` : '获取验证码'; }
+setInterval(updateCodeButton,1000);
+document.addEventListener('input',event => { if (event.target.id === 'explore-search') document.querySelector('#industry-list').innerHTML = industryCards(event.target.value.trim()); });
+document.addEventListener('click',event => {
+    const element = event.target.closest('[data-action]'); if (!element) return;
+    const [action,...parts] = element.dataset.action.split(':'); const value = parts.join(':');
+    if (action === 'go') go(value);
+    else if (action === 'nav') { trail = []; route = value; render(); window.scrollTo(0,0); }
+    else if (action === 'back') window.beforeBack();
+    else if (action === 'close') modal.close();
+    else if (action === 'guest') { state.session = true; save(); trail = []; route = 'home'; render(); }
+    else if (action === 'login-mode') { loginMode = loginMode === 'code' ? 'password' : 'code'; render(); }
+    else if (action === 'code') { const phone = document.querySelector('[name="phone"]').value; if (!/^1\d{10}$/.test(phone)) { document.querySelector('#auth-error').textContent = '请输入有效的 11 位手机号'; return; } codeUntil = Date.now() + 60000; updateCodeButton(); showModal('离线验证码', '<p>本版本不会发送短信。演示验证码为 <strong>123456</strong>，仅用于本机体验。</p>'); }
+    else if (action === 'legal') showModal(value === 'terms' ? '用户协议（体验版）' : '隐私政策', '<p>本应用为离线原型，不提供真实账号、短信、课程购买或专业咨询服务。计划、昵称与记录仅保存在本机；卸载或清除数据会永久删除。请勿录入敏感个人信息。</p>');
+    else if (action === 'industry') { selectedIndustry = Number(value); if (!state.visits.includes(selectedIndustry)) state.visits.push(selectedIndustry); save(); go('industry'); }
+    else if (action === 'filter') { exploreTab = value; render(); }
+    else if (action === 'favorite') { state.favorites = state.favorites.includes(selectedIndustry) ? state.favorites.filter(item => item !== selectedIndustry) : [...state.favorites,selectedIndustry]; save(); render(); }
+    else if (action === 'article') { const item = industries[selectedIndustry]; showModal(item.articles[Number(value)], `<p>${item.body}</p><ol class="plain-list"><li>先了解岗位与实际工作内容，列出三个想验证的问题。</li><li>选择一个一周内能完成的小项目，亲手尝试。</li><li>记录过程中的兴趣、困难和收获，再决定是否继续。</li></ol><small>Before 本地入门资料 · 演示内容</small>${button('把想法变成计划','industry-plan','class="primary"')}`); }
+    else if (action === 'industry-plan' || action === 'template') { if (modal.open) modal.close(); if (action === 'template') selectedIndustry = Number(value); startPlan(`探索${industries[selectedIndustry].title}`,selectedIndustry === 3 ? '生活方式' : selectedIndustry === 0 ? '行业探索' : '技能提升'); }
+    else if (action === 'new-plan') startPlan();
+    else if (action === 'plans-tab') { planTab = value; render(); }
+    else if (action === 'category') { captureDraft(); draft.category = value; render(); }
+    else if (action === 'previous-step') { captureDraft(); draftStep--; render(); }
+    else if (action === 'add-draft-task') { captureDraft(); draft.tasks.push({title:'',done:false}); render(); }
+    else if (action === 'remove-draft-task') { captureDraft(); if (draft.tasks.length === 1) { toast('请至少保留一个步骤'); return; } draft.tasks.splice(Number(value),1); render(); }
+    else if (action === 'plan') { selectedPlan = value; detailTab = '任务'; go('detail'); }
+    else if (action === 'detail-tab') { detailTab = value; render(); }
+    else if (action === 'toggle') { const task = state.plans.find(plan => plan.id === selectedPlan).tasks[Number(value)]; task.done = !task.done; save(); render(); }
+    else if (action === 'add-task') showModal('添加任务', '<form id="task-form"><input name="title" maxlength="80" placeholder="下一步想做什么？" aria-label="任务名称" required><button type="submit" class="primary">添加</button></form>');
+    else if (action === 'write-record') showModal('记录这一步', '<form id="record-form"><textarea name="text" maxlength="2000" placeholder="今天尝试了什么？有什么发现？" aria-label="记录内容" required></textarea><button class="primary" type="submit">保存记录</button></form>');
+    else if (action === 'delete-record') showModal('删除这条记录？', `<p>删除后无法恢复。</p>${button('确认删除',`confirm-record:${value}`,'class="primary"')}`);
+    else if (action === 'confirm-record') { state.records = state.records.filter(record => record.id !== value); save(); modal.close(); render(); }
+    else if (action === 'delete-plan') showModal('删除这个计划？', `<p>计划与任务会被删除，探索记录仍会保留。</p>${button('确认删除','confirm-delete','class="primary"')}`);
+    else if (action === 'confirm-delete') { state.plans = state.plans.filter(plan => plan.id !== selectedPlan); save(); modal.close(); trail = []; route = 'plans'; render(); }
+    else if (action === 'edit-name') showModal('修改昵称', `<form id="name-form"><input name="name" maxlength="20" value="${esc(state.name)}" aria-label="昵称" required><button type="submit" class="primary">保存</button></form>`);
+    else if (action === 'favorites') showModal('我的收藏', state.favorites.length ? state.favorites.map(index => button(industries[index].title,`open-favorite:${index}`,'class="card"')).join('') : '<p class="muted">暂时没有收藏。在行业详情页点击星标即可收藏。</p>');
+    else if (action === 'open-favorite') { selectedIndustry = Number(value); modal.close(); go('industry'); }
+    else if (action === 'courses') showModal('我的课程', '<p>体验版不包含付费课程。你可以使用免费的行业入门资料开始探索。</p>' + button('查看入门资料','open-explore','class="primary"'));
+    else if (action === 'open-explore') { modal.close(); go('explore'); }
+    else if (action === 'notifications') showModal('消息提醒', `<p>你有 ${state.plans.filter(plan => Model.progress(plan) < 100).length} 个进行中的计划。今天也为目标迈出一小步吧。</p>`);
+    else if (action === 'settings') showModal('设置', '<p>Before 1.0 · 离线体验版</p><p class="muted">数据仅保存在本机，不申请网络或通讯录权限。</p>' + button('隐私政策','legal:privacy','class="text-button"') + button('退出当前体验','logout','class="primary"'));
+    else if (action === 'logout') { state.session = false; save(); modal.close(); trail = []; route = 'login'; render(); }
+    else if (action === 'full-report') showModal('详细成长报告', `<p>探索方向：${state.visits.length} / ${industries.length}</p><p>计划总数：${state.plans.length}</p><p>完成计划：${state.plans.filter(plan => Model.progress(plan) === 100).length}</p><p>行动记录：${state.records.length}</p><p class="space muted">行业探索按浏览方向数计算；技能提升按任务完成率计算；生活方式按相关计划数量计算；自我认知按记录数量计算。此报告仅用于自我回顾。</p>`);
+});
+document.addEventListener('submit', async event => {
+    event.preventDefault(); const form = event.target; const data = new FormData(form);
+    if (form.id === 'auth-form') {
+        const phone = String(data.get('phone')); const credential = String(data.get('credential')); const error = document.querySelector('#auth-error');
+        if (!/^1\d{10}$/.test(phone)) { error.textContent = '请输入有效的 11 位手机号'; return; }
+        if (route === 'register' || loginMode === 'code') { if (codeUntil <= 0 || credential !== '123456') { error.textContent = '请先获取演示验证码，再输入 123456'; return; } }
+        if (route === 'register') { const password = String(data.get('password')); if (password.length < 6 || password.length > 16 || !data.get('agree')) { error.textContent = '请设置 6–16 位密码并同意协议'; return; } state.localCredential = { phone, hash: await hashPassword(phone,password) }; }
+        else if (loginMode === 'password' && (!state.localCredential || state.localCredential.phone !== phone || state.localCredential.hash !== await hashPassword(phone,credential))) { error.textContent = '本机账号或密码不正确；可使用演示验证码进入'; return; }
+        state.session = true; save(); trail = []; route = 'home'; render();
+    } else if (form.id === 'plan-form') {
+        captureDraft(); const error = document.querySelector('#plan-error');
+        if (draftStep === 1 && (!draft.title || !draft.start || !draft.end || draft.start > draft.end)) { error.textContent = !draft.title ? '请输入计划名称' : '请填写有效日期，结束日期不能早于开始日期'; return; }
+        if (draftStep === 2) { const message = Model.validatePlan(draft); if (message) { error.textContent = message; return; } }
+        if (draftStep < 3) { draftStep++; render(); } else { const message = Model.validatePlan(draft); if (message) { error.textContent = message; return; } draft.id = String(Date.now()); state.plans.push(draft); selectedPlan = draft.id; save(); draft = null; detailTab = '任务'; trail = ['plans']; route = 'detail'; render(); toast('计划已创建，开始第一步吧'); }
+    } else if (form.id === 'task-form') { const title = String(data.get('title')).trim(); if (!title) return; state.plans.find(plan => plan.id === selectedPlan).tasks.push({title,done:false}); save(); modal.close(); render(); }
+    else if (form.id === 'record-form') { const text = String(data.get('text')).trim(); if (!text) return; state.records.unshift({ id:String(Date.now()),text,date:new Date().toLocaleString('zh-CN'),planId:route === 'detail' ? selectedPlan : null }); save(); modal.close(); render(); toast('记录已保存'); }
+    else if (form.id === 'name-form') { const name = String(data.get('name')).trim(); if (!name) return; state.name = name; save(); modal.close(); render(); }
+});
+async function hashPassword(phone,password) { if (!window.crypto?.subtle) { toast('当前环境不支持安全密码存储，请使用演示验证码'); throw new Error('Secure hashing unavailable'); } const bytes = new TextEncoder().encode(`before-local:${phone}:${password}`); const digest = await crypto.subtle.digest('SHA-256',bytes); return Array.from(new Uint8Array(digest),byte => byte.toString(16).padStart(2,'0')).join(''); }
+render();
+
+</script><script>
+// Keeps the APK's original navigation, plan editor, palette and typography.
+// The added story and trial pages use the same visual components.
+const beforeStories = window.BeforeStories || [];
+const beforeExperiences = window.BeforeExperiences || [];
+const originalHome = home;
+const originalRender = render;
+state.experienceProgress ||= {};
+state.storyBookmarks ||= [];
+state.storyNotes ||= {};
+let storyId = 1;
+let storyReturn = 'home';
+let experienceId = 'law';
+let experienceTab = '任务';
+let directionSearch = '';
+const storyFor = id => beforeStories.find(item => item.id === Number(id));
+const experienceFor = id => beforeExperiences.find(item => item.id === id);
+const workFor = id => state.experienceProgress[id] ||= {started:false,paused:false,done:[],reflection:''};
+const categoryFor = item => item.category === '职业探索' ? '行业' : item.category === '技能试做' ? '技能' : '生活';
+const coverLabels = ['先试住，再决定','迈进陌生环境','从具体问题开始','靠近喜欢的现场','把目标缩小一点','继续之前，先问自己'];
+
+function storyPreview(item) {
+  return `<div class="video-story-card"><div class="video-story-cover"><span>${esc(coverLabels[item.id - 1])}</span><strong>${esc(item.id === 2 ? '先回答真正担心的事' : item.title)}</strong><small>图文故事 · ${esc(item.concept.split(' ')[0])}</small></div><div class="video-story-summary"><h3>${esc(item.title)}</h3><p>${esc(item.paragraphs[0])}</p>${button('阅读全文 →',`open-story:${item.id}`,'class="video-story-link"')}</div></div>`;
+}
+
+home = function() {
+  const storySection = `<div class="section-heading"><h3>读一个小故事</h3>${button('全部故事 ›','go:stories')}</div><p class="video-section-note">随意看看；遇到困难时也可以再回来。</p>${storyPreview(beforeStories[1])}${storyPreview(beforeStories[4])}`;
+  return originalHome().replace('<div class="section-heading"><h3>今日推荐', storySection + '<div class="section-heading"><h3>今日推荐');
+};
+
+function directionCard(item) {
+  const progress = workFor(item.id);
+  const subtitle = progress.started ? `${progress.done.length}/${item.steps.length} 步已完成 · ${progress.paused ? '已暂停' : '进行中'}` : '耗时待新手试做确认 · 自主体验';
+  return button(`<div class="row"><span class="bubble">${icon(item.icon)}</span><div class="grow"><h3>${esc(item.title)}</h3><p class="muted">${esc(item.subtitle)}</p><small>${subtitle}</small></div><span class="chevron">›</span></div>`,`open-experience:${item.id}`,'class="card video-direction"');
+}
+function directionCards() {
+  const term = directionSearch.trim();
+  const items = beforeExperiences.filter(item => (exploreTab === '推荐' || categoryFor(item) === exploreTab) && (!term || `${item.title}${item.subtitle}${item.category}`.includes(term)));
+  const game = exploreTab === '推荐' || exploreTab === '行业' ? (!term || '游戏行业'.includes(term) ? button(`<div class="row"><span class="bubble">${icon('game')}</span><div class="grow"><h3>游戏行业</h3><p class="muted">从兴趣到职业，了解游戏行业的真实一面</p><small>原有行业入门资料</small></div><span class="chevron">›</span></div>`,'industry:0','class="card video-direction"') : '') : '';
+  return game + items.map(directionCard).join('') || '<div class="empty">没有找到匹配的方向，试试其他关键词。</div>';
+}
+explore = function() {
+  return page(`<h2>探索</h2><div class="tabs">${['推荐','行业','技能','生活'].map(label => button(label,`filter:${label}`,`class="${label === exploreTab ? 'active' : ''}"`)).join('')}</div><label class="search">${icon('search')}<input id="video-explore-search" value="${esc(directionSearch)}" placeholder="搜索行业、技能或生活" aria-label="搜索方向"></label><h3 class="video-list-title">你可能感兴趣的方向</h3><div id="video-direction-list">${directionCards()}</div><p class="video-footnote">首批体验的步骤和耗时仍需真实试做确认。</p>`, 'explore');
+};
+
+function storyListPage() {
+  return page(`${header('全部故事')}<h2 class="video-page-title">先看看别人的小尝试</h2><p class="video-section-note">这 6 篇故事来自你提供的文档，阅读完全可选。</p>${beforeStories.map(storyPreview).join('')}`, 'home');
+}
+function storyDetailPage() {
+  const item = storyFor(storyId);
+  if (!item) return page(`${header('故事全文')}<p>故事未找到。</p>`);
+  const saved = state.storyBookmarks.includes(item.id);
+  const backLabel = storyReturn === 'experience' ? '返回当前任务' : '返回继续浏览';
+  return page(`${header('故事全文')}<div class="video-story-cover detail"><span>${esc(coverLabels[item.id - 1])}</span><strong>${esc(item.id === 2 ? '先回答真正担心的事' : item.title)}</strong><small>图文故事 · ${esc(item.concept.split(' ')[0])}</small></div><div class="video-story-meta"><span>${esc(item.concept.replace(' ', ' · '))}</span>${button(saved ? '已收藏 ✓' : '收藏故事',`bookmark-story:${item.id}`,'class="text-button"')}</div><h1 class="video-story-title">${esc(item.title)}</h1><p class="video-fiction-note">虚构故事，不是用户案例或效果证明</p><div class="video-story-prose">${item.paragraphs.map(text => `<p>${esc(text)}</p>`).join('')}</div><div class="video-insight"><h3>核心阐释</h3><p>${esc(item.insight)}</p></div><details class="video-boundary"><summary>这个方法的边界</summary><p>一个故事只提供一种思考角度。它不能代替真实体验、专业教程或你自己的判断。</p></details><section class="video-story-question"><h3>留给你的问题</h3><p>${esc(item.question)}</p><label for="story-note">换成你现在的方向，你愿意先尝试多小的一步？</label><textarea id="story-note" maxlength="2000" placeholder="可选，写一句也可以。内容只保存在当前浏览器。">${esc(state.storyNotes[item.id] || '')}</textarea>${button(storyReturn === 'experience' ? '保存到这个体验的记录' : '保存到我的记录','save-story-note','class="primary"')}</section><div class="video-sticky-action">${button(backLabel,'return-story','class="primary"')}<small>不用写感想，也能直接返回。</small></div>`, null);
+}
+function taskRows(item, work) {
+  return item.steps.map(([title,description],index) => `<div class="task video-task">${button(work.done.includes(index) ? '✓' : '',`toggle-experience-step:${index}`,`class="check ${work.done.includes(index) ? 'done' : ''}" aria-label="${work.done.includes(index) ? '取消完成' : '标记完成'}：${esc(title)}" aria-pressed="${work.done.includes(index)}"`)}<div class="grow"><p>${esc(title)}</p><small>${work.done.includes(index) ? '已完成' : '未开始'}</small><p class="video-task-description">${esc(description)}</p></div></div>`).join('');
+}
+function storyHelp(item) {
+  const story = storyFor(item.story);
+  return `<div class="video-context-help"><span>卡住了？找一个看问题的角度</span><p>继续、换一种试法，或者先停下，都可以。</p><div class="video-help-card"><small>可选阅读 · ${esc(story.concept.split(' ')[0])}</small><h3>${esc(story.title)}</h3><div>${button('读这个故事',`open-story:${story.id}`,'class="text-button"')}${button('这次先不看','skip-story','class="text-button"')}</div></div></div>`;
+}
+function experienceDetailPage() {
+  const item = experienceFor(experienceId);
+  if (!item) return page(`${header('计划详情')}<p>方向未找到。</p>`);
+  const work = workFor(item.id);
+  const complete = work.done.length === item.steps.length;
+  const percentage = Math.round(work.done.length / item.steps.length * 100);
+  const status = complete ? '已完成' : work.paused ? '已暂停' : work.started ? '进行中' : '未开始';
+  const content = experienceTab === '任务' ? `${!work.started ? button('把这次体验加入计划 +','start-experience','class="primary video-start"') : ''}<div class="video-prep"><h3>开始前准备</h3><p>${esc(item.prep)}</p><h3>完成后留下什么</h3><p>${esc(item.result)}</p></div>${taskRows(item,work)}${storyHelp(item)}${work.started ? button(work.paused ? '继续体验' : '暂停体验','pause-experience','class="text-button video-pause"') : ''}` : experienceTab === '记录' ? `<div class="video-record"><h3>这次尝试的记录</h3><p class="muted">写下你做了什么、卡在哪里、想验证什么。</p><form id="experience-reflection"><textarea name="reflection" aria-label="体验感受" maxlength="2000" placeholder="写一句也可以...">${esc(work.reflection)}</textarea><button type="submit" class="primary">保存记录</button></form></div>` : `<div class="card video-resource"><h3>行动指南</h3><p>${esc(item.prep)}</p><p>${esc(item.help)}</p><small>专业知识与真实操作步骤仍需对应领域资料核实。</small></div>${button('浏览原有行业资料 →','go:explore','class="card"')}`;
+  return page(`${header('计划详情')}<img class="banner video-banner" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgMzQwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIHN0b3AtY29sb3I9IiMxNDI3NGIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0MDdmZmMiLz48L2xpbmVhckdyYWRpZW50PjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxwYXRoIGQ9Ik02MCAwSDBWNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2E2YzhmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xOCIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjYmcpIi8+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIzNDAiIGZpbGw9InVybCgjZ3JpZCkiIHRyYW5zZm9ybT0icm90YXRlKC0xNSA0MDAgMTcwKSIvPjxjaXJjbGUgY3g9IjY0MCIgY3k9Ijc4IiByPSIzOSIgZmlsbD0iI2ZmNjkzZCIvPjxlbGxpcHNlIGN4PSIzOTAiIGN5PSIzMTMiIHJ4PSIyOTAiIHJ5PSI0MiIgZmlsbD0iIzBhMTczNSIgb3BhY2l0eT0iLjUiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxOTUgODIpIHJvdGF0ZSgtMTIgMjEwIDEwMCkiPjxyZWN0IHg9IjAiIHdpZHRoPSIyNDgiIGhlaWdodD0iMTYwIiByeD0iMTQiIGZpbGw9IiMwYzE5MmMiIHN0cm9rZT0iIzc2YTRmZiIgc3Ryb2tlLXdpZHRoPSI1Ii8+PHJlY3QgeD0iMTMiIHk9IjEzIiB3aWR0aD0iMjIyIiBoZWlnaHQ9IjEzMCIgcng9IjciIGZpbGw9IiMyZTY1YzciLz48cGF0aCBkPSJNMTggMTIwTDc3IDY3IDEyNCA5MSAxODIgMzIgMjMyIDY4VjE0M0gxOFoiIGZpbGw9IiM3NWE2ZmMiLz48cGF0aCBkPSJNMTA0IDE2M0gxNDdMMTU4IDE5Nkg5MFoiIGZpbGw9IiNhMGM1ZmYiLz48cmVjdCB4PSI2NiIgeT0iMTk2IiB3aWR0aD0iMTE1IiBoZWlnaHQ9IjkiIHJ4PSI0IiBmaWxsPSIjZDRlN2ZmIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ0MCAxNzkpIHJvdGF0ZSgxMikiPjxwYXRoIGQ9Ik0xMiAxNVEyMC02IDQ3IDBMMTM0IDBRMTYwLTYgMTcwIDE5TDE5MCA3OVExOTUgMTExIDE2NyAxMTFMMTM1IDgySDQ2TDE3IDExMFEtMTIgMTE0LTggODBaIiBmaWxsPSIjZGNlOGZmIi8+PHJlY3QgeD0iMjQiIHk9IjM0IiB3aWR0aD0iNDAiIGhlaWdodD0iMTIiIHJ4PSIzIiBmaWxsPSIjMjQzYjc3Ii8+PHJlY3QgeD0iMzgiIHk9IjIwIiB3aWR0aD0iMTIiIGhlaWdodD0iNDAiIHJ4PSIzIiBmaWxsPSIjMjQzYjc3Ii8+PGNpcmNsZSBjeD0iMTQxIiBjeT0iMjciIHI9IjgiIGZpbGw9IiNmZjcyNGMiLz48Y2lyY2xlIGN4PSIxNTciIGN5PSI0NCIgcj0iOCIgZmlsbD0iIzM1NzNmOSIvPjxjaXJjbGUgY3g9Ijg1IiBjeT0iNjAiIHI9IjEzIiBmaWxsPSIjNTE3N2JjIi8+PC9nPjxjaXJjbGUgY3g9IjE0NiIgY3k9IjI3MSIgcj0iMTciIGZpbGw9IiNmZjcxNDUiLz48Y2lyY2xlIGN4PSI3MTUiIGN5PSIyNTgiIHI9IjY1IiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZWFjZmYiIHN0cm9rZS13aWR0aD0iMyIvPjwvc3ZnPgo=" alt="Before 探索插画"><div class="row video-detail-heading"><h1 class="grow">${esc(item.title)}</h1><span class="status">${status}</span></div><small class="video-detail-subtitle">自主体验 · 节奏由你决定</small><div class="progress-row"><div class="track"><span style="width:${percentage}%"></span></div><span>${percentage}%</span></div><div class="tabs detail-tabs video-detail-tabs">${['任务','记录','资源'].map(label => button(label,`experience-tab:${label}`,`class="${experienceTab === label ? 'active' : ''}"`)).join('')}</div>${content}<p class="video-footnote">离线内测原型 · 进度和记录保存在当前浏览器。</p>`, null);
+}
+
+render = function() {
+  if (route === 'stories') app.innerHTML = storyListPage();
+  else if (route === 'story') app.innerHTML = storyDetailPage();
+  else if (route === 'experience') app.innerHTML = experienceDetailPage();
+  else originalRender();
+};
+
+document.addEventListener('input', event => {
+  if (event.target.id !== 'video-explore-search') return;
+  directionSearch = event.target.value;
+  document.querySelector('#video-direction-list').innerHTML = directionCards();
+});
+document.addEventListener('click', event => {
+  const target = event.target.closest('[data-action]');
+  if (!target) return;
+  const [action,...rest] = target.dataset.action.split(':');
+  const value = rest.join(':');
+  if (action === 'open-story') { storyId=Number(value); storyReturn=route; go('story'); }
+  else if (action === 'return-story') window.beforeBack();
+  else if (action === 'bookmark-story') { const id=Number(value); state.storyBookmarks=state.storyBookmarks.includes(id) ? state.storyBookmarks.filter(x=>x!==id) : [...state.storyBookmarks,id]; save(); render(); }
+  else if (action === 'save-story-note') { const note=document.querySelector('#story-note').value.trim(); state.storyNotes[storyId]=note; if (note) state.records.unshift({id:String(Date.now()),text:note,date:new Date().toLocaleString('zh-CN'),planId:null}); save(); toast('已保存到本机记录'); }
+  else if (action === 'open-experience') { experienceId=value; experienceTab='任务'; go('experience'); }
+  else if (action === 'experience-tab') { experienceTab=value; render(); }
+  else if (action === 'start-experience') { const work=workFor(experienceId); work.started=true; work.paused=false; save(); render(); toast('已加入计划，开始第一步吧'); }
+  else if (action === 'pause-experience') { const work=workFor(experienceId); work.paused=!work.paused; save(); render(); toast(work.paused ? '已暂停，进度已保存' : '已继续体验'); }
+  else if (action === 'toggle-experience-step') { const work=workFor(experienceId); const index=Number(value); work.started=true; work.paused=false; work.done=work.done.includes(index) ? work.done.filter(n=>n!==index) : [...work.done,index].sort((a,b)=>a-b); save(); render(); }
+  else if (action === 'skip-story') { toast('好的，先继续手上的体验'); }
+});
+document.addEventListener('submit', event => {
+  if (event.target.id !== 'experience-reflection') return;
+  event.preventDefault();
+  workFor(experienceId).reflection=String(new FormData(event.target).get('reflection') || '').trim();
+  save(); toast('记录已保存');
+});
+render();
+
+</script></body>
+</html>
